@@ -1,0 +1,19 @@
+@import './../../../styles/colors.scss';
+@import './../../../styles/mixin.scss';
+
+.go-back-button{
+  width: 120px;
+  height: 40px;
+  padding: 10px;
+  background-color: $color-gray-ligth;
+  border-radius: 20px;
+  border: none;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 15px;
+  cursor: pointer;
+  @include flex-content(flex, null, space-evenly, center);
+}
+
+.go-back-button:hover {
+  background-color: $color-gray-medium;
+}

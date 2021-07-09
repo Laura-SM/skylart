@@ -1,0 +1,102 @@
+@import './../../../styles/mixin.scss';
+@import './../../../styles/colors.scss';
+
+.header {  
+    background-color: $color-red-medium-dark;
+    color: $color-white;
+    width: 100%;
+    height: 60px;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.container {
+    @include flex-content (inline-flex,row,space-between,center);
+    padding: 0 5%;
+    width: 100%;
+    height: 100%;
+    a{
+        outline: none;
+        text-decoration: none;
+        color:white;
+    }
+    &__left-elements{
+        padding: 0;
+        list-style: none;
+        @include flex-content (flex,row,null,center);
+        img {
+            height: 30px;
+            color: white;
+            padding-right: 50px;
+        }
+        .left-elements {
+            padding:  22px 50px;
+            height: 100%;
+            position: relative;
+            margin-right: auto;
+            &__list {
+                @include flex-content(flex, column, row, null);
+                visibility: hidden;
+                opacity: 0;
+                list-style: none;
+                position: absolute;
+                background-color: $color-gray-ligth;
+                padding: 10px 20px;
+                top: 61px;
+                left: 30px;
+                width: 200px;
+                z-index: 2;
+            }
+            &__item{
+                padding: 8px 0;
+                a{
+                    color: $color-black-dark;
+                }
+                
+            }
+            &__item:hover {
+                a:hover{
+                    color: $color-red-medium-dark;
+                    transition: 0.3s;
+                }
+            }
+        }
+        .left-elements:hover{
+            cursor: pointer;
+            color: $color-black-dark;
+            a{
+                color: $color-black-dark;
+                transition: 0.3s;
+            }
+        }
+        .left-elements:hover > .left-elements__list {
+            visibility: visible;
+            opacity: 1;
+            transition: 0.5s;
+        }
+    }
+    &__right-elements{
+        margin: 0;
+        list-style: none;
+        @include flex-content(flex,row,flex-end,center);
+        position: relative;
+        height: 100%
+    }
+    .right-elements {
+        padding: 20px;
+        padding-top: 12px;
+        padding-right: 0;
+        text-align: right;
+    }
+    .right-elements:hover{
+        filter: invert(1);
+        cursor: pointer;    
+        transition: 0.3s;
+    }
+}
+
+.arrow-category {
+    font-size: 10px;
+    padding-left: 5px;
+}
