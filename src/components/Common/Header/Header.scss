@@ -81,19 +81,20 @@
         list-style: none;
         @include flex-content(flex,row,flex-end,center);
         position: relative;
-        height: 100%
-    }
-    .right-elements {
-        padding: 20px;
-        padding-top: 12px;
-        padding-right: 0;
-        text-align: right;
-    }
-    .right-elements:hover{
-        filter: invert(1);
-        cursor: pointer;    
-        transition: 0.3s;
-    }
+        height: 100%;
+    
+				.right-elements {
+						padding: 20px;
+						padding-top: 12px;
+						padding-right: 0;
+						text-align: right;
+				}
+				.right-elements:hover{
+						filter: invert(1);
+						cursor: pointer;    
+						transition: 0.3s;
+				}
+		}
 }
 
 .arrow-category {
